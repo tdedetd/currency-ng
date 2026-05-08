@@ -1,0 +1,32 @@
+.text-center {
+  text-align: center;
+}
+
+.text-small {
+  font-size: .8em;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-stroked {
+  // TODO: нужно перехуячить на -webkit-text-stroke
+  text-shadow:
+    -1px -1px 0 #000,
+    0px -1px 0 #000,
+    1px -1px 0 #000,
+    1px 0px 0 #000,
+    1px 1px 0 #000,
+    0px 1px 0 #000,
+    -1px 1px 0 #000,
+    -1px 0px 0 #000;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

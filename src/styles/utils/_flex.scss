@@ -1,0 +1,68 @@
+@use 'sass:list';
+@use '../variables';
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.align-flex-start {
+  align-items: flex-start;
+}
+
+.align-flex-end {
+  align-items: flex-end;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-0-0 {
+  flex: 0 0 auto;
+}
+
+.flex-1-1 {
+  flex: 1 1 auto;
+}
+
+@mixin generate-gap($sizes) {
+  @for $i from 1 through list.length($sizes) {
+    .gap-#{list.nth($sizes, $i)} {
+      gap: #{list.nth($sizes, $i)}px;
+    }
+  }
+}
+
+@include generate-gap(variables.$sizes);

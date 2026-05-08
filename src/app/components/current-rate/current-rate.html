@@ -1,0 +1,7 @@
+<h2 class="mb-10">Текущий курс валют</h2>
+
+<li>
+  @for (currency of currencies(); track $index) {
+    <ul>{{ currency.Name }}: {{ currency.Value }} за {{ currency.Nominal }}</ul>
+  }
+</li>
